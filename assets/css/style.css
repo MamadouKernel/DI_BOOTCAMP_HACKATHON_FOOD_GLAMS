@@ -1,0 +1,25 @@
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.logoImage{
+    width: 200px;
+}
+
+
+#pills-tab{
+    background-color: black !important;
+}
+
+
+.nav-link{
+    color: orange !important;
+    font-weight: bold;
+}
+
+#pills-tab .active{
+    background-color: orange !important;
+    color: white !important;
+}
