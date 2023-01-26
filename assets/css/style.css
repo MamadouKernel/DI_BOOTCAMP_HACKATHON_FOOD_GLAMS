@@ -10,6 +10,7 @@ header{
     justify-content: center;
     align-items: center;
     background-color:var(--black) ;
+
 }
 .logoImage{
     width: 200px;
@@ -33,12 +34,31 @@ header{
     color: white !important;
 }
 /* Begin section Nav */
+
+/* Debut card plat Africain */
+.card{
+    height: 20rem;
+    width: 13rem;
+}
+
+/* Debut card plat Africain */
+
+
 /* Debut code css du footer */
 .container_footer{
     background-color: var(--black)!important;
+    color: var(--orange) !important;
 }
 
 .color_copyright{
     background-color: var(--black);
+}
+
+.boutton_Footer{
+    color: var(--orange) !important;
+}
+
+.span_Footer{
+    padding-left: 10px;
 }
 /* Fin code css du footer */
