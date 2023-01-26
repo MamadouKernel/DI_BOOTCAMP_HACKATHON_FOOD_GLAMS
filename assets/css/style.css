@@ -1,9 +1,15 @@
+/* Début des variables */
+:root {
+    --black: black;
+    --orange: orange;
+}
+/* Fin des variables */
 /* Debut section header */
 header{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color:var(--black) ;
 }
 .logoImage{
     width: 200px;
@@ -13,17 +19,22 @@ header{
 /* Begin section Nav */
 
 #pills-tab{
-    background-color: black !important;
+    background-color: var(--black) !important;
 }
 
 
 .nav-link{
-    color: orange !important;
+    color: var(--orange) !important;
     font-weight: bold;
 }
 
 #pills-tab .active{
-    background-color: orange !important;
+    background-color: var(--orange) !important;
     color: white !important;
 }
 /* Begin section Nav */
+/* Debut code css du footer */
+.container_footer{
+    background-color: var(--black)!important;
+}
+/* Fin code css du footer */
