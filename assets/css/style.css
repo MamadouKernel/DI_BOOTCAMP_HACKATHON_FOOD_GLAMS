@@ -37,4 +37,8 @@ header{
 .container_footer{
     background-color: var(--black)!important;
 }
+
+.color_copyright{
+    background-color: var(--black);
+}
 /* Fin code css du footer */
