@@ -1,3 +1,4 @@
+/* Debut section header */
 header{
     display: flex;
     justify-content: center;
@@ -7,7 +8,9 @@ header{
 .logoImage{
     width: 200px;
 }
+/* End section header */
 
+/* Begin section Nav */
 
 #pills-tab{
     background-color: black !important;
@@ -23,3 +26,4 @@ header{
     background-color: orange !important;
     color: white !important;
 }
+/* Begin section Nav */
