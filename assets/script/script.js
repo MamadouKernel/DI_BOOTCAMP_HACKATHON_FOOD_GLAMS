@@ -97,6 +97,8 @@ for (const plat of platsAfricain) {
         panier.produits = panier.hasOwnProperty('produits') ? panier.produits : [];
         panier.produits.push({...JSON.parse(card.dataset.produit), quantite: 1})
         localStorage.setItem("panier", JSON.stringify(panier))
+
+
     }
 }
 
@@ -164,6 +166,7 @@ for (const plat of platsAmericain) {
 
     let div = document.createElement("div");
     div.classList.add("card");
+    div.dataset.produit = JSON.stringify(plat);
     div1.appendChild(div);
 
     let img = document.createElement("img")
@@ -264,6 +267,7 @@ for (const plat of platsAsiatique) {
 
     let div = document.createElement("div");
     div.classList.add("card");
+    div.dataset.produit = JSON.stringify(plat);
     div1.appendChild(div);
 
     let img = document.createElement("img")
@@ -375,6 +379,7 @@ for (const plat of platsEuropeen) {
 
     let div = document.createElement("div");
     div.classList.add("card");
+    div.dataset.produit = JSON.stringify(plat);
     div1.appendChild(div);
 
     let img = document.createElement("img")
@@ -408,6 +413,7 @@ for (const plat of platsEuropeen) {
         panier.produits = panier.hasOwnProperty('produits') ? panier.produits : [];
         panier.produits.push({...JSON.parse(card.dataset.produit), quantite: 1})
         localStorage.setItem("panier", JSON.stringify(panier))
+
     }
 }
 
