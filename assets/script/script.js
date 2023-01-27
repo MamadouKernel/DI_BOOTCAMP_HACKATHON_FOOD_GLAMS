@@ -2,7 +2,7 @@
 
 
 let card = document.querySelector(".card");
-
+let liste = document.querySelector(".liste");
 // Fin declaration des variables globales
 
 
@@ -87,18 +87,42 @@ for (const plat of platsAfricain) {
     ButtonPlat.textContent = "Ajouter Au Panier"
     ButtonPlat.onclick = function (e) {
         let card = ButtonPlat.closest('.card')
-        console.log(card.dataset.produit);
-        // ajouter le produit au panier
-        let panier = localStorage.getItem('panier')
-        if (panier) 
-            panier = JSON.parse(panier)
-        else 
-            panier = {}
-        panier.produits = panier.hasOwnProperty('produits') ? panier.produits : [];
-        panier.produits.push({...JSON.parse(card.dataset.produit), quantite: 1})
-        localStorage.setItem("panier", JSON.stringify(panier))
+        let produit =JSON.parse(card.dataset.produit);
+        let tr = document.createElement("tr");
+        liste.appendChild(tr);
+        let td1 = document.createElement("td");
+        td1.textContent = liste.querySelectorAll("tr").length;
+        tr.appendChild(td1);
+        
+        let td2 = document.createElement("td");
+        let image = document.createElement("img");
+        image.style.width = "8rem";
+        image.style.height = "6rem";
+        image.src = produit.image;
+        td2.appendChild(image);
+        tr.appendChild(td2);
 
+        let td3 = document.createElement("td");
+        td3.textContent = produit.nom;
+        tr.appendChild(td3);
 
+        let td4 = document.createElement("td");
+        td4.textContent = produit.prix;
+        tr.appendChild(td4);
+
+        let td5 = document.createElement("td");
+        td5.textContent = produit.prix;
+        tr.appendChild(td5);
+
+        let td6 = document.createElement("td");
+        td6.textContent = 1;
+        tr.appendChild(td6)
+
+        let td7 = document.createElement("td");
+        let boutton = '<button class="boutton_Plus boutton"><i class="bi bi-plus-lg"></i></button><button class="boutton_Moins boutton"><i class="bi bi-dash"></i></button><button class="boutton_Sup boutton"><i class="bi bi-trash3"></i></button>' 
+        td7.innerHTML = boutton;
+        tr.appendChild(td7);
+        
     }
 }
 
@@ -190,16 +214,41 @@ for (const plat of platsAmericain) {
     ButtonPlat.textContent = "Ajouter Au Panier";
     ButtonPlat.onclick = function (e) {
         let card = ButtonPlat.closest('.card')
-        console.log(card.dataset.produit);
-        // ajouter le produit au panier
-        let panier = localStorage.getItem('panier')
-        if (panier) 
-            panier = JSON.parse(panier)
-        else 
-            panier = {}
-        panier.produits = panier.hasOwnProperty('produits') ? panier.produits : [];
-        panier.produits.push({...JSON.parse(card.dataset.produit), quantite: 1})
-        localStorage.setItem("panier", JSON.stringify(panier))
+        let produit =JSON.parse(card.dataset.produit);
+        let tr = document.createElement("tr");
+        liste.appendChild(tr);
+        let td1 = document.createElement("td");
+        td1.textContent = liste.querySelectorAll("tr").length;
+        tr.appendChild(td1);
+        
+        let td2 = document.createElement("td");
+        let image = document.createElement("img");
+        image.style.width = "8rem";
+        image.style.height = "6rem";
+        image.src = produit.image;
+        td2.appendChild(image);
+        tr.appendChild(td2);
+
+        let td3 = document.createElement("td");
+        td3.textContent = produit.nom;
+        tr.appendChild(td3);
+
+        let td4 = document.createElement("td");
+        td4.textContent = produit.prix;
+        tr.appendChild(td4);
+
+        let td5 = document.createElement("td");
+        td5.textContent = produit.prix;
+        tr.appendChild(td5);
+
+        let td6 = document.createElement("td");
+        td6.textContent = 1;
+        tr.appendChild(td6)
+
+        let td7 = document.createElement("td");
+        let boutton = '<button class="boutton_Plus boutton"><i class="bi bi-plus-lg"></i></button><button class="boutton_Moins boutton"><i class="bi bi-dash"></i></button><button class="boutton_Sup boutton"><i class="bi bi-trash3"></i></button>' 
+        td7.innerHTML = boutton;
+        tr.appendChild(td7);
     }
 }
 
@@ -291,16 +340,41 @@ for (const plat of platsAsiatique) {
     ButtonPlat.textContent = "Ajouter Au Panier"
     ButtonPlat.onclick = function (e) {
         let card = ButtonPlat.closest('.card')
-        console.log(card.dataset.produit);
-        // ajouter le produit au panier
-        let panier = localStorage.getItem('panier')
-        if (panier) 
-            panier = JSON.parse(panier)
-        else 
-            panier = {}
-        panier.produits = panier.hasOwnProperty('produits') ? panier.produits : [];
-        panier.produits.push({...JSON.parse(card.dataset.produit), quantite: 1})
-        localStorage.setItem("panier", JSON.stringify(panier))
+        let produit =JSON.parse(card.dataset.produit);
+        let tr = document.createElement("tr");
+        liste.appendChild(tr);
+        let td1 = document.createElement("td");
+        td1.textContent = liste.querySelectorAll("tr").length;
+        tr.appendChild(td1);
+        
+        let td2 = document.createElement("td");
+        let image = document.createElement("img");
+        image.style.width = "8rem";
+        image.style.height = "6rem";
+        image.src = produit.image;
+        td2.appendChild(image);
+        tr.appendChild(td2);
+
+        let td3 = document.createElement("td");
+        td3.textContent = produit.nom;
+        tr.appendChild(td3);
+
+        let td4 = document.createElement("td");
+        td4.textContent = produit.prix;
+        tr.appendChild(td4);
+
+        let td5 = document.createElement("td");
+        td5.textContent = produit.prix;
+        tr.appendChild(td5);
+
+        let td6 = document.createElement("td");
+        td6.textContent = 1;
+        tr.appendChild(td6)
+
+        let td7 = document.createElement("td");
+        let boutton = '<button class="boutton_Plus boutton"><i class="bi bi-plus-lg"></i></button><button class="boutton_Moins boutton"><i class="bi bi-dash"></i></button><button class="boutton_Sup boutton"><i class="bi bi-trash3"></i></button>' 
+        td7.innerHTML = boutton;
+        tr.appendChild(td7);
     }
 }
 
@@ -403,17 +477,41 @@ for (const plat of platsEuropeen) {
     ButtonPlat.textContent = "Ajouter Au Panier"
     ButtonPlat.onclick = function (e) {
         let card = ButtonPlat.closest('.card')
-        console.log(card.dataset.produit);
-        // ajouter le produit au panier
-        let panier = localStorage.getItem('panier')
-        if (panier) 
-            panier = JSON.parse(panier)
-        else 
-            panier = {}
-        panier.produits = panier.hasOwnProperty('produits') ? panier.produits : [];
-        panier.produits.push({...JSON.parse(card.dataset.produit), quantite: 1})
-        localStorage.setItem("panier", JSON.stringify(panier))
+        let produit =JSON.parse(card.dataset.produit);
+        let tr = document.createElement("tr");
+        liste.appendChild(tr);
+        let td1 = document.createElement("td");
+        td1.textContent = liste.querySelectorAll("tr").length;
+        tr.appendChild(td1);
+        
+        let td2 = document.createElement("td");
+        let image = document.createElement("img");
+        image.style.width = "8rem";
+        image.style.height = "6rem";
+        image.src = produit.image;
+        td2.appendChild(image);
+        tr.appendChild(td2);
 
+        let td3 = document.createElement("td");
+        td3.textContent = produit.nom;
+        tr.appendChild(td3);
+
+        let td4 = document.createElement("td");
+        td4.textContent = produit.prix;
+        tr.appendChild(td4);
+
+        let td5 = document.createElement("td");
+        td5.textContent = produit.prix;
+        tr.appendChild(td5);
+
+        let td6 = document.createElement("td");
+        td6.textContent = 1;
+        tr.appendChild(td6)
+
+        let td7 = document.createElement("td");
+        let boutton = '<button class="boutton_Plus boutton"><i class="bi bi-plus-lg"></i></button><button class="boutton_Moins boutton"><i class="bi bi-dash"></i></button><button class="boutton_Sup boutton"><i class="bi bi-trash3"></i></button>' 
+        td7.innerHTML = boutton;
+        tr.appendChild(td7);
     }
 }
 
