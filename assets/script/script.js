@@ -184,7 +184,20 @@ for (const plat of platsAmericain) {
     let ButtonPlat = document.createElement("button");
     ButtonPlat.classList.add("buttonPlat");
     div.appendChild(ButtonPlat);
-    ButtonPlat.textContent = "Ajouter Au Panier"
+    ButtonPlat.textContent = "Ajouter Au Panier";
+    ButtonPlat.onclick = function (e) {
+        let card = ButtonPlat.closest('.card')
+        console.log(card.dataset.produit);
+        // ajouter le produit au panier
+        let panier = localStorage.getItem('panier')
+        if (panier) 
+            panier = JSON.parse(panier)
+        else 
+            panier = {}
+        panier.produits = panier.hasOwnProperty('produits') ? panier.produits : [];
+        panier.produits.push({...JSON.parse(card.dataset.produit), quantite: 1})
+        localStorage.setItem("panier", JSON.stringify(panier))
+    }
 }
 
 
@@ -272,6 +285,19 @@ for (const plat of platsAsiatique) {
     ButtonPlat.classList.add("buttonPlat");
     div.appendChild(ButtonPlat);
     ButtonPlat.textContent = "Ajouter Au Panier"
+    ButtonPlat.onclick = function (e) {
+        let card = ButtonPlat.closest('.card')
+        console.log(card.dataset.produit);
+        // ajouter le produit au panier
+        let panier = localStorage.getItem('panier')
+        if (panier) 
+            panier = JSON.parse(panier)
+        else 
+            panier = {}
+        panier.produits = panier.hasOwnProperty('produits') ? panier.produits : [];
+        panier.produits.push({...JSON.parse(card.dataset.produit), quantite: 1})
+        localStorage.setItem("panier", JSON.stringify(panier))
+    }
 }
 
 // Fin session commander plat Asiatique
@@ -370,6 +396,19 @@ for (const plat of platsEuropeen) {
     ButtonPlat.classList.add("buttonPlat");
     div.appendChild(ButtonPlat);
     ButtonPlat.textContent = "Ajouter Au Panier"
+    ButtonPlat.onclick = function (e) {
+        let card = ButtonPlat.closest('.card')
+        console.log(card.dataset.produit);
+        // ajouter le produit au panier
+        let panier = localStorage.getItem('panier')
+        if (panier) 
+            panier = JSON.parse(panier)
+        else 
+            panier = {}
+        panier.produits = panier.hasOwnProperty('produits') ? panier.produits : [];
+        panier.produits.push({...JSON.parse(card.dataset.produit), quantite: 1})
+        localStorage.setItem("panier", JSON.stringify(panier))
+    }
 }
 
 // Fin session commander plat Europeen
