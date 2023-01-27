@@ -53,11 +53,28 @@ header{
     background-color: var(--orange);
 }
 
+.buttonPlat:hover{
+    color:var(--orange);
+    background-color: var(--black);
+    border: 2px solid var(--orange);
+}
+
 .imageCard{
     height: 13rem;
 }
 
 /* Debut card  */
+
+
+
+/* Debut Panier */
+
+.boutton{
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+/* Fin Panier */
 
 
 /* Debut code css du footer */
