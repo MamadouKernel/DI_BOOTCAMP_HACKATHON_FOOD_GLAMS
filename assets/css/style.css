@@ -2,6 +2,7 @@
 :root {
     --black: black;
     --orange: orange;
+    --white: white;
 }
 /* Fin des variables */
 /* Debut section header */
@@ -31,17 +32,32 @@ header{
 
 #pills-tab .active{
     background-color: var(--orange) !important;
-    color: white !important;
+    color: var(--white) !important;
 }
 /* Begin section Nav */
 
-/* Debut card plat Africain */
+/* Debut card */
+
 .card{
     height: 20rem;
-    width: 13rem;
+    border: 1px solid var(--orange);
+    text-align: center;
+    color: var(--orange);
 }
 
-/* Debut card plat Africain */
+.buttonPlat{
+    margin: 0 10px;
+    border: 2px solid var(--orange);
+    border-radius: 20px;
+    color: var(--white);
+    background-color: var(--orange);
+}
+
+.imageCard{
+    height: 13rem;
+}
+
+/* Debut card  */
 
 
 /* Debut code css du footer */
