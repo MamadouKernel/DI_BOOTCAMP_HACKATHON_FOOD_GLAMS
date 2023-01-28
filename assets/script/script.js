@@ -85,6 +85,8 @@ for (const plat of platsAfricain) {
     ButtonPlat.classList.add("buttonPlat");
     div.appendChild(ButtonPlat);
     ButtonPlat.textContent = "Ajouter Au Panier"
+    
+    //Debut Ajout des elements selectionnées par dans le boutton dans le panier
     ButtonPlat.onclick = function (e) {
         let card = ButtonPlat.closest('.card')
         let produit =JSON.parse(card.dataset.produit);
@@ -124,6 +126,7 @@ for (const plat of platsAfricain) {
         tr.appendChild(td7);
         
     }
+    //Fin Ajout des elements selectionnées par dans le boutton dans le panier
 }
 
 
@@ -212,6 +215,8 @@ for (const plat of platsAmericain) {
     ButtonPlat.classList.add("buttonPlat");
     div.appendChild(ButtonPlat);
     ButtonPlat.textContent = "Ajouter Au Panier";
+
+    //Debut Ajout des elements selectionnées par dans le boutton dans le panier
     ButtonPlat.onclick = function (e) {
         let card = ButtonPlat.closest('.card')
         let produit =JSON.parse(card.dataset.produit);
@@ -250,6 +255,7 @@ for (const plat of platsAmericain) {
         td7.innerHTML = boutton;
         tr.appendChild(td7);
     }
+    //Fin Ajout des elements selectionnées par dans le boutton dans le panier
 }
 
 
@@ -338,6 +344,8 @@ for (const plat of platsAsiatique) {
     ButtonPlat.classList.add("buttonPlat");
     div.appendChild(ButtonPlat);
     ButtonPlat.textContent = "Ajouter Au Panier"
+
+    //Debut Ajout des elements selectionnées par dans le boutton dans le panier
     ButtonPlat.onclick = function (e) {
         let card = ButtonPlat.closest('.card')
         let produit =JSON.parse(card.dataset.produit);
@@ -376,6 +384,7 @@ for (const plat of platsAsiatique) {
         td7.innerHTML = boutton;
         tr.appendChild(td7);
     }
+    //Fin Ajout des elements selectionnées par dans le boutton dans le panier
 }
 
 // Fin session commander plat Asiatique
@@ -475,6 +484,8 @@ for (const plat of platsEuropeen) {
     ButtonPlat.classList.add("buttonPlat");
     div.appendChild(ButtonPlat);
     ButtonPlat.textContent = "Ajouter Au Panier"
+
+    //Debut Ajout des elements selectionnées par dans le boutton dans le panier
     ButtonPlat.onclick = function (e) {
         let card = ButtonPlat.closest('.card')
         let produit =JSON.parse(card.dataset.produit);
@@ -513,6 +524,7 @@ for (const plat of platsEuropeen) {
         td7.innerHTML = boutton;
         tr.appendChild(td7);
     }
+    //Fin Ajout des elements selectionnées par dans le boutton dans le panier
 }
 
 // Fin session commander plat Europeen
